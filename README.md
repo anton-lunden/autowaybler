@@ -7,7 +7,7 @@
 All you need is your Waybler credentials:
 
 ```sh
-docker run -d \
+docker run \
   -e WAYBLER_EMAIL=you@example.com \
   -e WAYBLER_PASSWORD=secret \
   ghcr.io/anton-lunden/autowaybler
@@ -31,7 +31,7 @@ By default, it checks every hour between 17:00 and 23:00 whether your car is plu
 Check every 30 minutes with a 12-hour lookahead:
 
 ```sh
-docker run -d \
+docker run \
   -e WAYBLER_EMAIL=you@example.com \
   -e WAYBLER_PASSWORD=secret \
   -e CRON="*/30 * * * *" \
